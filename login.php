@@ -20,8 +20,18 @@
 
         if($check){
 
-            header("Location: signup.html");
-            exit;
+          session_start();
+
+          $_SESSION['data'] = $row['name'];
+
+          header("Location: index.php");
+          exit;
+
+          // session_unset();
+
+          // session_destroy();
+
+      
         }
 
         else{
